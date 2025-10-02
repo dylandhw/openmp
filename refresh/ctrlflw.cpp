@@ -4,7 +4,7 @@ using std::cout;
 using std::endl;
 
 int main() {
-    int a = 4;
+    int a = 7;
     int b = 10;
 
     if (a == 5) {
@@ -22,6 +22,9 @@ int main() {
             break;
         case 6:
             cout << a << " == 6" << endl;
+            break;
+        default:
+            cout << a << " != any provided values" << endl;
             break;
     }
 
