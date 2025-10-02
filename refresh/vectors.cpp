@@ -24,6 +24,15 @@ int main() {
     cout << "Vector 1 size = " << v1.size() << endl;
     cout << "Vector 1 capacity = " << v1.capacity() << endl;       
 
-    v1.shrink_to_fit();
+    v1.shrink_to_fit(); // Takes the capacity down to the size of the vector
     cout << "Vector 1 capacity = " << v1.capacity() << endl;       
+
+    v1.resize(10, 5); // Resize to size of 10 elements, all new elements are of value 5;
+    cout << "Vector size: " << v1.size() << endl;
+    cout << "Vector capacity: " << v1.capacity() << endl;
+    for (auto i : v1) {
+        cout << i << " ";
+    }
+    cout << endl;
 }
+
