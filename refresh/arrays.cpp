@@ -36,4 +36,9 @@ int main() {
     cout << "Get the first element of a_0: " << a_0.front() << endl;
     // Get the last element
     cout << "Get the last element of a_0: " << a_0.back() << endl;
+    // Can fill with a specific element
+    a_1.fill(999);
+    cout << "a_1 = " << a_1[0] << " " << a_1[1] << " " << a_1[2] << endl;
+
+    return 0;
 }
