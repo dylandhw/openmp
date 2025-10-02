@@ -53,5 +53,7 @@ int main() {
     cout << "v1[0] = " << v1[0] << endl;
     // But we can also use .at(). Safer way to access elements (but it is slower since it is doing a range check)
     cout << "v1.at(0) = " << v1.at(0) << endl;
+
+    v1.clear(); // Gets rid of the entire size (capacity is still allocated!)
 }
 
