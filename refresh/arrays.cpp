@@ -28,6 +28,12 @@ int main() {
     // If we do not initialize everything, the remaining get set to zero
     cout << "----------Loop-Three----------" << endl;
     for(int i = 0; i < 3; i++) cout << "Index " << i+1 << "'s value is " << a_1[i] << endl;
-    // Can also get the number of elements
-    cout << "\na_1 size = " << a_1.size() << endl; 
+    
+    cout << "----------Methods----------" << endl;
+    // Get num of elements
+    cout << "Get the size: a_0 size = " << a_0.size() << endl; 
+    // Get first element
+    cout << "Get the first element of a_0: " << a_0.front() << endl;
+    // Get the last element
+    cout << "Get the last element of a_0: " << a_0.back() << endl;
 }
