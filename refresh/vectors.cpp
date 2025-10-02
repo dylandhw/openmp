@@ -20,9 +20,10 @@ int main() {
 
     v1.push_back(3); // Capacity is expanded exponentially, everytime we do push_back()
     // We do not need to rely on exponential allocation though..
-    v1.reserve(3); // Gives space for 3 integers (only increases the size of our container)
+    v1.reserve(300); // Gives space for 3 integers (only increases the size of our container)
     cout << "Vector 1 size = " << v1.size() << endl;
     cout << "Vector 1 capacity = " << v1.capacity() << endl;       
 
-
+    v1.shrink_to_fit();
+    cout << "Vector 1 capacity = " << v1.capacity() << endl;       
 }
