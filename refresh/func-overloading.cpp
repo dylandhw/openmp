@@ -21,4 +21,16 @@ double print_and_inc_double(double dp) {
 
 int main() {
     int i = 4362;
+    float sp = 20.123;
+    float dp = 194.421;
+
+    i = print_and_inc_int(i);
+    sp = print_and_inc_float(sp);
+    dp = print_and_inc_double(dp);
+
+    cout << "New int value " << i << endl;
+    cout << "New float value " << sp << endl;
+    cout << "New double value " << dp << endl;
+
+    return 0;
 }
