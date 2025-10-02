@@ -16,9 +16,25 @@ int main(){
     }
     cout << endl;
 
+    // We can iterate through STIL containers and dereference them to access their values. 
+    // Safe and intutive, can use a1.begin() or begin(a1) to not worry about indexing
     cout << "-----Iterators-----" << endl;
     for (auto it = a1.begin(); it < end(a1); it++) {
         cout << *it << endl;
+    }
+    cout << endl;
+ 
+    // Reverese iterators use .rbegin() and .rend() to go in reverse
+    cout << "-----Reverse-Iterators-----" << endl;
+    for (auto it = a1.rbegin(); it < rend(a1); it++) {
+        cout << *it << endl;
+    }
+    cout << endl;
+
+    // C-style loops by using size in our range check
+    cout << "-----Explicit-Size-Comparison-----" << endl;
+    for (auto i = 0u; i < a1.size(); i++) {
+        cout << a1[i] << endl;
     }
     cout << endl;
 }
