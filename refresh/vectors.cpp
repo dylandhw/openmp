@@ -34,5 +34,24 @@ int main() {
         cout << i << " ";
     }
     cout << endl;
+
+    // What if we resize witha  smaller value - we chop off a part of our vector from the end->beginning
+    v1.resize(5);
+    cout << "Vector size: " << v1.size() << endl;
+    cout << "Vector capacity: " << v1.capacity() << endl;
+    for (auto i : v1) {
+        cout << i << " ";
+    }
+    cout << endl;
+
+    // Some more methods
+    v1.pop_back(); // Gets rid of the last element in the vector
+    v1.erase(begin(v1) + 2); // Gets rid of the third element!
+
+
+    // Accessing vectors just like arrays
+    cout << "v1[0] = " << v1[0] << endl;
+    // But we can also use .at(). Safer way to access elements (but it is slower since it is doing a range check)
+    cout << "v1.at(0) = " << v1.at(0) << endl;
 }
 
