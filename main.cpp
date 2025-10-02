@@ -6,7 +6,11 @@
 int main(){
 #pragma omp parallel
   {
-    std::cout << "Printing from thread " << omp_get_thread_num() << "\n"; 
+    // only one thread can execute at a time - no need to worry about locking and unlocking
+#pragma omp critical 
+    {
+        std::cout << "Printing from thread " << omp_get_thread_num() << "\n"; 
+    }   
   }
    
     return 0;
