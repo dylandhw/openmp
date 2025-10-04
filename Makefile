@@ -1,2 +1,2 @@
-main: main.cpp
-	g++ -O3 -fopenmp -march=native -mtune=native -std=c++17 main.cpp -o main
+reimann: reimann.cpp
+	g++ -O3 -fopenmp -march=native -mtune=native -std=c++17 reimann.cpp -o reimann
