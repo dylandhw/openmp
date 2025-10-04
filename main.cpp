@@ -5,18 +5,27 @@
 #include <math.h>
 
 using namespace std;
-
 #define PI acos(-1.0) // defining PI as the arccos of -1
 
+// shared and private memory between threads
+
+// critical, 1 thread at a time
+// single, first thread to arrive does the task 
+// master, takes the zero thread
+
 int main(int argc, char* argv[]) {
-  // initiate a parallel region:
-  #pragma omp parallel
-  { // will basically spawn the max num of threads to run inside this scope
-    
-    #pragma omp critical // only one thread can enter at a time..it will start a queue
+  
+  int x;
+
+  #pragma omp parallel private(x) // initiates the parallel region
+  {
+    x = omp_get_thread_num();
+
+    #pragma omp master
     {
-      cout << omp_get_thread_num() << "\n";
+      cout << x << "\n";
     }
+  
   }
 }
 
