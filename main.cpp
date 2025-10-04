@@ -1,17 +1,13 @@
-// prints from multiple threads
+// going over parallel computing in C++ using OPENMP
 
 #include <iostream>
 #include <omp.h>
+#include <math.h>
 
-int main(){
-#pragma omp parallel
-  {
-    // only one thread can execute at a time - no need to worry about locking and unlocking
-#pragma omp critical 
-    {
-        std::cout << "Printing from thread " << omp_get_thread_num() << "\n"; 
-    }   
-  }
-   
-    return 0;
+using namespace std;
+
+#define PI acos(-1.0) // defining PI as the arccos of -1
+
+int main(int argc, char* argv[]) {
+
 }
