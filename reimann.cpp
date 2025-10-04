@@ -13,10 +13,11 @@ int main(int argc, char* argv[]) {
     #pragma omp parallel
     {
         #pragma omp for // for loop
-        for(int m = 0; m<N-1; m++)
+        for(int m = 0; m<N; m++) // this is essentially splitting the for loop amongst the threads
         {
-
+            sum += sin(PI*double(m)/N);
         }
     }
-
+    cout.precision(15);
+    cout << "Answer: " << PI*sum/N << endl;
 } 
